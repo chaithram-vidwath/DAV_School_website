@@ -1,5 +1,6 @@
 export const navItems = [
   { id: 'home', label: 'Home' },
+  { id: 'academics', label: 'Academics' },
   { id: 'documents', label: 'Documents' },
   { id: 'facilities', label: 'Facilities' },
   { id: 'gallery', label: 'Gallery' },
@@ -171,21 +172,68 @@ export const formSteps = [
   { step: '04', eyebrow: 'Finally', title: 'Upload' },
 ]
 
+export const academicSections = [
+  {
+    id: 'methodology',
+    title: 'Teaching Methodology & Faculty',
+    description: 'Our educators employ dynamic, student-centric strategies to ensure every learner remains engaged, inspired, and intellectually challenged.',
+    points: [
+      'Innovative activity-based teaching methods that stimulate creativity and imagination.',
+      'A team of well qualified, enthusiastic, and energetic teachers.',
+      'Continuous orientation and training programmes to enhance teaching skills.',
+      'Regular vocational workshops for professional development.'
+    ]
+  },
+  {
+    id: 'support',
+    title: 'Infrastructure & Student Support',
+    description: 'We provide a safe, modern environment equipped with high-tech tools that facilitate both collaborative and independent learning.',
+    points: [
+      'Well-equipped classrooms with smart boards.',
+      'Limited student strength in each section to ensure individual attention.',
+      'Remedial classes and thorough revision sessions for students requiring additional support.',
+      'Specialised language teachers to strengthen spoken and written communication skills.'
+    ]
+  },
+  {
+    id: 'holistic',
+    title: 'Holistic Development',
+    description: 'Education at DAV extends beyond textbooks, focusing on character building, physical fitness, and cultural appreciation.',
+    points: [
+      'Encouragement of individual talents and group activities to promote teamwork.',
+      'Educational field trips and excursions.',
+      'Active participation in interschool and interstate competitions.',
+      'Celebration of National and Regional festivals, highlighting their cultural significance.',
+      '"No Bag Day" on Saturdays for Nursery students to promote joyful learning.'
+    ]
+  },
+  {
+    id: 'partnership',
+    title: 'Parent-Teacher Partnership',
+    description: 'We believe in a strong collaborative bond between home and school to ensure the holistic growth of every child.',
+    points: [
+      'Continuous feedback through daily after-school teacher-parent interactions.',
+      'Regular Parent-Teacher Meetings (PTMs) to monitor and review student progress.'
+    ]
+  }
+]
+
 export const galleryCategories = [
   { id: 'all', label: 'All' },
   { id: 'campus', label: 'Campus' },
-  { id: 'academics', label: 'Academics' },
   { id: 'events', label: 'Events' },
   { id: 'sports', label: 'Sports' },
   { id: 'achievements', label: 'Achievements' },
-  { id: 'arts', label: 'Arts & Culture' },
+  {
+    id: 'arts',
+    label: 'Arts & Culture',
+
+  },
   {
     id: 'infrastructure',
     label: 'Infrastructure',
     description: 'D.A.V. Public School provides a safe, modern, and well-equipped learning environment that supports academic excellence, physical development, and creative growth.'
   },
-
-
 ]
 
 export const galleryItems = [

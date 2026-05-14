@@ -7,6 +7,7 @@ const Footer = ({ onNavigate }) => {
         {/* Step 1: Navigation */}
         <nav className="footer-step footer-step--nav">
           <button onClick={() => onNavigate('home')}>Home</button>
+          <button onClick={() => onNavigate('academics')}>Academics</button>
           <button onClick={() => onNavigate('admissions')}>Admissions</button>
           <button onClick={() => onNavigate('facilities')}>Facilities</button>
           <button onClick={() => onNavigate('gallery')}>Gallery</button>

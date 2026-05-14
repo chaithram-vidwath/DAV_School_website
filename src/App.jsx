@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage'
 import ContactPage from './pages/ContactPage'
 import FacultyPage from './pages/FacultyPage'
 import AboutPage from './pages/AboutPage'
+import AcademicsPage from './pages/AcademicsPage'
 import Footer from './components/Footer'
 
 
@@ -79,6 +80,8 @@ function App() {
         <FacultyPage />
       ) : activePage === 'about-us' ? (
         <AboutPage />
+      ) : activePage === 'academics' ? (
+        <AcademicsPage />
       ) : (
         <HomePage onNavigate={setActivePage} />
       )}

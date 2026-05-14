@@ -1,7 +1,7 @@
 import { navItems } from '../data/siteData'
 import logo from '../assets/Logo.png'
 
-const directPages = new Set(['home', 'documents', 'facilities', 'gallery', 'admissions', 'faculty-staff', 'about-us', 'contact-us'])
+const directPages = new Set(['home', 'documents', 'facilities', 'gallery', 'admissions', 'faculty-staff', 'about-us', 'contact-us', 'academics'])
 
 export default function TopNav({ activePage, onNavigateHome, onNavigate }) {
   return (

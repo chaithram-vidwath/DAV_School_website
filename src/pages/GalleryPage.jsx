@@ -118,7 +118,7 @@ export default function GalleryPage() {
 
       {/* INTRO */}
       <section className="gallery-intro">
-        <div className="section-heading">
+        <div className="section-heading section-heading--center">
           <p className="eyebrow">Inside DAV</p>
 
           <h2>
@@ -127,10 +127,20 @@ export default function GalleryPage() {
           </h2>
         </div>
 
-        <p className="gallery-intro__copy">
-          {currentCategory?.description ||
-            'A visual record of daily learning, student expression, achievement, and community life at DAV. Use the categories below to explore our campus through different lenses.'}
-        </p>
+        <div className="gallery-intro__content">
+          <p className="gallery-intro__copy">
+            {currentCategory?.description ||
+              'A visual record of daily learning, student expression, achievement, and community life at DAV. Use the categories below to explore our campus through different lenses.'}
+          </p>
+
+          {activeCategory === 'academics' && (
+            <div className="gallery-intro__academic-pillars">
+              {['Innovative Methodology', 'Infrastructure Support', 'Holistic Growth', 'Parent Partnership'].map(pillar => (
+                <span key={pillar} className="academic-pillar-tag">◆ {pillar}</span>
+              ))}
+            </div>
+          )}
+        </div>
       </section>
 
       {/* FILTERS */}
