@@ -577,8 +577,8 @@ html {
 
 .homepage {
   display: grid;
-  gap: 0;
-  /* Managed by section margins */
+  gap: 2.5rem;
+  /* Reduced for a more compact layout */
   padding-top: 0;
   padding-bottom: 5rem;
 }
@@ -1443,7 +1443,7 @@ html {
   margin: 0;
   font-family: var(--serif);
   line-height: 0.98;
-  font-weight: 500;
+  font-weight: 200;
   color: var(--teal);
 }
 
@@ -1475,6 +1475,18 @@ html {
   max-width: var(--content-max, 1400px);
   margin: 4rem auto 8rem auto;
   padding: 0 var(--page-pad);
+  text-align: center;
+}
+
+.cta-panel h2 {
+  max-width: 1400px !important;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  /* Optimized to stay on one line */
+  padding: 0 var(--page-pad);
+  line-height: 1.2;
+  white-space: normal;
 }
 
 .hero__actions {
@@ -1627,7 +1639,7 @@ html {
 .principal-section__content h2,
 .section-heading h2,
 .cta-panel h2 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-size: clamp(3rem, 2vw, 5rem);
 }
 
 .section-heading {
@@ -1746,10 +1758,11 @@ html {
   text-align: center;
   background: linear-gradient(180deg, #0b6b6d 0%, #0a5c5f 100%);
   color: #fff;
+  border-radius: 20px;
 }
 
 .cta-panel p:last-of-type {
-  max-width: 40rem;
+  max-width: 70rem;
   margin-left: auto;
   margin-right: auto;
   color: #d8ecec;
@@ -3643,14 +3656,16 @@ section.reveal--active {
   }
 
   .homepage {
-    gap: 6rem;
+    gap: 2.5rem;
+    /* Tightened gap for all screens */
     padding-top: 0rem;
     padding-bottom: 5rem;
   }
 
   .hero__copy {
-    width: 42rem;
-    max-width: 42rem;
+    width: 100%;
+    max-width: 1000px;
+    /* Expanded to keep text in single line */
     align-content: start;
   }
 
@@ -4097,17 +4112,25 @@ section.reveal--active {
   color: #bfdbfe;
 }
 
-.section-heading {
+.section-heading,
+.section-heading--center {
   text-align: center;
-  margin-bottom: 50px;
-  max-width: 800px;
+  max-width: 1200px;
+  /* Expanded for single-line headings */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3rem;
 }
 
 .section-heading h2 {
-  font-size: 3rem;
-  margin-top: 15px;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  /* Optimized to stay on one line */
+  color: var(--teal-dark);
+  margin-bottom: 1.5rem;
+  max-width: 1400px !important;
+  width: 100%;
+  padding: 0 var(--page-pad);
+  line-height: 1.2;
 }
 
 /* ====================================
@@ -4696,7 +4719,7 @@ section.reveal--active {
 }
 
 .section-heading h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: 37px;
   font-weight: 700;
   line-height: 2.1;
   color: #0f172a;
@@ -4929,6 +4952,108 @@ section.reveal--active {
   bottom: 0;
   right: 0;
   background-image: url('/images/history-2.jpg');
+}.principal-box-stack-section {
+  background: white;
+  padding: 6rem var(--page-pad);
+  width: 100%;
+}
+
+.principal-box-stack-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 18rem 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.principal-profile-unit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image-box,
+.profile-name-box {
+  background: white;
+  border: 1px solid rgba(0, 105, 107, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 51, 53, 0.08);
+}
+
+.profile-image-box {
+  padding: 0.6rem;
+  border-bottom: 0; /* Remove divider between boxes for a unified feel */
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.profile-portrait-sharp {
+  width: 100%;
+  aspect-ratio: 4 / 5.2;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.2rem;
+}
+
+.profile-name-box {
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-name-text {
+  color: var(--teal-dark);
+  font-size: 1.15rem;
+  font-weight: 800;
+  display: block;
+}
+
+.profile-role-text {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.principal-greeting-card {
+  background: linear-gradient(180deg, #0b6b6d 0%, #0a5c5f 100%);
+  padding: 4rem;
+  border-radius: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 25px 60px rgba(0, 51, 53, 0.15);
+}
+
+.principal-greeting-card h2,
+.principal-greeting-card .eyebrow,
+.message-paragraph-white p {
+  color: white !important;
+}
+
+.heading-white {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.message-paragraph-white p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.card-quote-mark {
+  font-size: 6rem;
+  color: white;
+  opacity: 0.12;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  line-height: 1;
 }
 
 .principal-message-section,
@@ -5311,7 +5436,8 @@ section.reveal--active {
   align-items: flex-end;
   justify-content: flex-start;
   text-align: left;
-  padding: 0 var(--page-pad) 3.5rem var(--page-pad); /* Balanced bottom padding */
+  padding: 0 var(--page-pad) 3.5rem var(--page-pad);
+  /* Balanced bottom padding */
   z-index: 1;
   transform: scale(1.1);
   /* Subtle zoom effect for active slide */
@@ -5393,20 +5519,21 @@ section.reveal--active {
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   margin-bottom: 0.5rem;
   padding-top: 2.5rem;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  /* Slightly larger for bold look */
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  /* Increased for bolder look */
   line-height: 1.1;
   font-weight: 800;
-  /* Extra Bold */
 }
 
 .hero-description-light {
   opacity: 0;
-  font-size: 1.25rem;
-  line-height: 1.6;
+  font-size: 1.5rem;
+  /* Increased for better legibility */
+  line-height: 1.5;
   margin-bottom: 2.5rem;
   color: white;
-  max-width: 800px;
+  max-width: 900px;
+  /* Slightly wider for the larger font */
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   font-weight: 600;
 }

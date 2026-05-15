@@ -107,33 +107,55 @@ export default function HomePage({ onNavigate }) {
         </button>
       </section>
 
-      {/* Principal's Message Section (About Page Style) */}
-      <section className="home-principal-featured reveal" style={{ padding: '4rem 0' }}>
-        <article className="principal-card-expanded">
-          <div className="principal-card-expanded__image">
-            <div
-              className="portrait-frame"
-              style={{
-                background: `url(${Principal}) center/cover no-repeat`
-              }}
-            ></div>
+
+      <section className="facilities-section">
+        <div className="section-heading">
+          <p className="eyebrow">Why families choose us</p>
+          <h2>An ecosystem that supports learning beyond the classroom</h2>
+        </div>
+
+        <div className="facilities-grid">
+          {facilities.map((item) => (
+            <article className="facility-card" key={item.title}>
+              <span className="facility-card__icon" aria-hidden="true">
+                {item.icon}
+              </span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* LEADERSHIP GREETING - Two-Box Vertical Stack Design */}
+      <section className="principal-box-stack-section">
+        <div className="principal-box-stack-grid">
+          {/* THE TWO BOXES: Image Box + Name Box */}
+          <div className="principal-profile-unit">
+            <article className="profile-image-box">
+              <div 
+                className="profile-portrait-sharp" 
+                style={{ backgroundImage: `url(${Principal})` }}
+              />
+            </article>
+            <article className="profile-name-box">
+              <strong className="profile-name-text">Smt. Dr. Kavya Shree Basappa</strong>
+              <span className="profile-role-text">Principal, DAV Public School</span>
+            </article>
           </div>
-          <div className="principal-card-expanded__content">
-            <div className="quote-icon">“</div>
-            <p className="eyebrow">Leadership Greeting</p>
-            <h2>Message from the Principal</h2>
-            <p>
-              "At D.A.V. Public School, we believe every child is unique.
-              Our focus is to create a stimulating learning environment that promotes
-              intellectual growth, emotional well-being, and moral responsibility
-              through a strong partnership between school and parents."
-            </p>
-            <div className="principal-info">
-              <strong>Smt. Dr. Kavya Shree Basappa</strong>
-              <span>Principal, DAV Public School</span>
+
+          {/* THE MESSAGE CARD: Green Institutional Card */}
+          <article className="principal-greeting-card">
+            <div className="card-quote-mark">“</div>
+            <p className="eyebrow eyebrow--light">Leadership Greeting</p>
+            <h2 className="heading-white">Message from the Principal</h2>
+            <div className="message-paragraph-white">
+              <p>
+                "At DAV Public School, we believe every child is unique. Our focus is to create a stimulating learning environment that promotes intellectual growth, emotional well-being, and moral responsibility through a strong partnership between school and parents."
+              </p>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
 
       <section className="achievements-section">
@@ -160,24 +182,7 @@ export default function HomePage({ onNavigate }) {
         </div>
       </section>
 
-      <section className="facilities-section">
-        <div className="section-heading">
-          <p className="eyebrow">Why families choose us</p>
-          <h2>An ecosystem that supports learning beyond the classroom</h2>
-        </div>
 
-        <div className="facilities-grid">
-          {facilities.map((item) => (
-            <article className="facility-card" key={item.title}>
-              <span className="facility-card__icon" aria-hidden="true">
-                {item.icon}
-              </span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </section>
 
       <section className="management-section">
         <div className="section-heading">
