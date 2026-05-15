@@ -9,9 +9,9 @@ const Footer = ({ onNavigate }) => {
           <button onClick={() => onNavigate('home')}>Home</button>
           <button onClick={() => onNavigate('academics')}>Academics</button>
           <button onClick={() => onNavigate('admissions')}>Admissions</button>
-          <button onClick={() => onNavigate('facilities')}>Facilities</button>
+          <button onClick={() => onNavigate('facilities')}>Infrastructure</button>
           <button onClick={() => onNavigate('gallery')}>Gallery</button>
-          <button onClick={() => onNavigate('documents')}>Documents</button>
+          <button onClick={() => onNavigate('documents')}>Mandatory Disclosure</button>
           <button onClick={() => onNavigate('faculty-staff')}>Faculty</button>
           <button onClick={() => onNavigate('about-us')}>About Us</button>
           <button onClick={() => onNavigate('contact-us')}>Contact Us</button>

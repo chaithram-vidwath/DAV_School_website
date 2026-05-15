@@ -1,137 +1,116 @@
-import { facilities } from '../data/siteData'
+import React from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+
+// Authentic School Assets
+import campusImg from '../assets/Campus-1.jpg'
+import entranceImg from '../assets/Entrance.jpg'
+import labImg from '../assets/Lab.jpg'
+import busImg from '../assets/School-Bus.jpg'
+import libraryImg from '../assets/library.jpg'
+import sportsImg from '../assets/sportsstadium.jpg'
+import sciLabImg from '../assets/ScienceLab.jpg'
+import compLabImg from '../assets/computerlab.jpg'
 
 export default function FacilitiesPage() {
   useScrollReveal()
 
   return (
     <main className="facilities-page">
-      <section className="facilities-hero">
-        <div className="facilities-hero__media" aria-hidden="true" />
-        <div className="facilities-hero__overlay" />
-        <div className="facilities-hero__content">
-          <p className="eyebrow eyebrow--light">Our environment</p>
-          <h1>Architecture designed for ambition</h1>
+      {/* Hero Section */}
+      <section className="facilities-hero-v2">
+        <div className="v2-hero__image" style={{ backgroundImage: `url(${entranceImg})` }} />
+        <div className="v2-hero__content">
+          <p className="eyebrow">Institutional Excellence</p>
+          <h1>Infrastructure Built for Ambition</h1>
           <p>
-            At DAV Public School, our campus is more than a collection of
-            buildings. It is a living learning environment designed to inspire
-            curiosity, discipline, wellness, and confidence.
+            Spanning over <strong>11,891.589 Sq. Meters</strong>, our campus provides
+            a sophisticated environment for academic and athletic mastery.
           </p>
+          <div className="hero-stat-row">
+            <div className="h-stat"><strong>64</strong><span>Classrooms</span></div>
+            <div className="h-stat"><strong>All</strong><span>Labs Verified</span></div>
+          </div>
         </div>
       </section>
 
-      <section className="facility-narrative facility-narrative--reverse">
-        <div className="facility-narrative__copy">
-          <p className="eyebrow">Laboratories & research</p>
-          <h2>Spaces for inquiry</h2>
+      {/* Laboratories Section */}
+      <section className="facility-split reveal">
+        <div className="split-content">
+          <p className="eyebrow">Research & Inquiry</p>
+          <h2>Advanced Laboratories</h2>
           <p>
-            Our science and STEM environments give students room to test ideas,
-            work collaboratively, and build confidence through practical
-            discovery. Learning here is designed to be hands-on, visible, and
-            memorable.
+            Our specialized wings are designed for practical discovery, featuring fully equipped
+            spaces for Physics, Chemistry, and Biology.
           </p>
-          <button className="facility-link" type="button">
-            Explore the STEM Wing
-          </button>
+          <ul className="premium-list">
+            <li>Physics Laboratory</li>
+            <li>Chemistry Laboratory</li>
+            <li>Biology Laboratory</li>
+          </ul>
         </div>
-        <div className="facility-narrative__image facility-narrative__image--lab" aria-hidden="true" />
+        <div className="split-image" style={{ backgroundImage: `url(${sciLabImg})` }} />
       </section>
 
-      <section className="facility-narrative">
-        <div className="facility-narrative__image facility-narrative__image--library" aria-hidden="true" />
-        <div className="facility-narrative__copy">
+      {/* Computer Labs Section */}
+      <section className="facility-split facility-split--reverse reveal">
+        <div className="split-content">
+          <p className="eyebrow">Digital Literacy</p>
+          <h2>Computing & Tech Wing</h2>
+          <p>
+            Equipped with the latest systems, our computer labs serve as a foundation for
+            coding, research, and digital innovation.
+          </p>
+          <div className="status-pill">✓ Fully Available</div>
+        </div>
+        <div className="split-image" style={{ backgroundImage: `url(${compLabImg})` }} />
+      </section>
+
+      {/* Library Section */}
+      <section className="facility-split reveal">
+        <div className="split-content">
           <p className="eyebrow">The Learning Commons</p>
-          <h2>Quiet for reflection</h2>
+          <h2>Institutional Library</h2>
           <p>
-            The library and reading commons are designed as calm intellectual
-            spaces for independent study, guided reading, and academic depth.
-            They support both focus and a strong reading culture across grades.
+            A sanctuary for intellectual growth, housing thousands of academic books,
+            periodicals, and digital resources.
           </p>
-          <button className="facility-link" type="button">
-            View Reading Resources
-          </button>
         </div>
+        <div className="split-image" style={{ backgroundImage: `url(${libraryImg})` }} />
       </section>
 
-      <section className="facility-arts">
-        <div className="facility-arts__copy">
-          <p className="eyebrow">Creative studios</p>
-          <h2>Expressions of self</h2>
+      {/* Sports Section */}
+      <section className="facility-split facility-split--reverse reveal">
+        <div className="split-content">
+          <p className="eyebrow">Athletics & Wellness</p>
+          <h2>Varsity Sports Hub</h2>
           <p>
-            From art rooms and music practice spaces to performance-ready halls,
-            our creative environments encourage students to build confidence,
-            aesthetic sensibility, and a voice of their own.
+            A comprehensive curriculum including Volleyball, Cricket, swimming,
+            Archery, and Rifle shooting.
           </p>
-          <button className="facility-link" type="button">
-            View the Activity Spaces
-          </button>
+          <div className="sports-tags-v2">
+            <span>Cricket</span><span>Volleyball</span><span>Archery</span><span>Swimming</span><span>Yoga</span><span>Basketball</span><span>Kho-Kho</span><span>Kabbadi</span><span>Chess</span><span>Rifle shooting</span>
+          </div>
         </div>
-        <div className="facility-arts__gallery">
-          <div className="facility-arts__tile facility-arts__tile--one" aria-hidden="true" />
-          <div className="facility-arts__tile facility-arts__tile--two" aria-hidden="true" />
-        </div>
+        <div className="split-image" style={{ backgroundImage: `url(${sportsImg})` }} />
       </section>
 
-      <section className="facility-bento">
-        <div className="section-heading section-heading--center">
-          <p className="eyebrow">Integrated excellence</p>
-          <h2>Spaces that support the full student experience</h2>
+      {/* Transport Section */}
+      <section className="facility-split reveal">
+        <div className="split-content">
+          <p className="eyebrow">Student Safety</p>
+          <h2>GPS-Enabled Transport</h2>
+          <p>
+            Ensuring safe and comfortable transit for all students with a
+            modern fleet of supervised buses.
+          </p>
         </div>
-
-        <div className="facility-bento__grid">
-          <article className="facility-bento__card facility-bento__card--large">
-            <div>
-              <h3>Aquatic and sports infrastructure</h3>
-              <p>
-                Structured movement, team culture, and physical confidence are
-                supported through dedicated sports zones and supervised activity
-                spaces.
-              </p>
-            </div>
-            <div className="facility-bento__visual facility-bento__visual--pool" aria-hidden="true" />
-          </article>
-
-          <article className="facility-bento__card facility-bento__card--primary">
-            <span className="facilities-overview__icon" aria-hidden="true">
-              ⚽
-            </span>
-            <h3>Varsity fields</h3>
-            <p>Outdoor play, drills, assemblies, and house-level competition zones.</p>
-          </article>
-
-          <article className="facility-bento__card">
-            <span className="facilities-overview__icon" aria-hidden="true">
-              🍽️
-            </span>
-            <h3>Student dining</h3>
-            <p>Nutritious meals served in a clean, supervised community setting.</p>
-          </article>
-
-          <article className="facility-bento__card facility-bento__card--wide">
-            <div>
-              <h3>Meditation and wellness garden</h3>
-              <p>
-                A quieter zone for mindfulness, reflection, and emotional
-                balance within the school day.
-              </p>
-            </div>
-            <div className="facility-bento__visual facility-bento__visual--garden" aria-hidden="true" />
-          </article>
-        </div>
+        <div className="split-image" style={{ backgroundImage: `url(${busImg})` }} />
       </section>
 
       <section className="facility-cta">
         <div>
           <p className="eyebrow eyebrow--light">Visit the campus</p>
           <h2>Experience the campus in person</h2>
-        </div>
-        <div className="facility-cta__actions">
-          <button className="button button--light" type="button">
-            Book a Private Tour
-          </button>
-          <button className="button facility-cta__ghost" type="button">
-            Download Campus Map
-          </button>
         </div>
       </section>
     </main>

@@ -37,10 +37,42 @@ export default function AcademicsPage() {
         <div className="academics-intro__card">
            <p>
             D.A.V. Public School is affiliated with the Central Board of Secondary Education (CBSE). 
-            The medium of instruction is English, with special emphasis on communicative English 
-            from Pre-KG to Grade X. The school has consistently achieved a 100% pass result with 
-            distinctions in board examinations, reflecting its strong academic foundation.
+            We follow a rigorous academic framework from <strong>Pre-KG to Grade X</strong>, 
+            blending traditional values with 21st-century skills like Artificial Intelligence.
           </p>
+        </div>
+      </section>
+
+      {/* Academic Profile Grid */}
+      <section className="academic-profile-grid reveal">
+        <div className="profile-container">
+          <div className="profile-card">
+            <div className="profile-icon">🎓</div>
+            <h3>Pre-KG to Grade X</h3>
+            <p>Classes Offered</p>
+          </div>
+          <div className="profile-card">
+            <div className="profile-icon">📜</div>
+            <h3>CBSE Board Pattern</h3>
+            <p>Examination System</p>
+          </div>
+          <div className="profile-card">
+            <div className="profile-icon">👥</div>
+            <h3>1,932</h3>
+            <p>Total Students</p>
+          </div>
+          <div className="profile-card">
+            <div className="profile-icon">📏</div>
+            <h3>35</h3>
+            <p>Class Strength</p>
+          </div>
+          <div className="profile-card profile-card--wide">
+            <div className="profile-icon">📚</div>
+            <div className="profile-details">
+              <h3>Core Subjects</h3>
+              <p>English, Hindi, Kannada, Mathematics, Science, Social Science & Artificial Intelligence</p>
+            </div>
+          </div>
         </div>
       </section>
 

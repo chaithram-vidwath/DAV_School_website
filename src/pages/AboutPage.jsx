@@ -5,8 +5,8 @@ import principalImage from '../assets/Principal-Kavya-Shree-Basappa.jpg'
 import chairmanImage from '../assets/N.SACHIDANANDA-MURTHY-CHAIRMAN.jpg'
 import secretaryImage from '../assets/R.ANAND-SECRETARY.jpg'
 import ceoImage from '../assets/JAYASHREE.S.MURTHY-C.E.O.jpg'
-import historyLegacy from '../assets/history-legacy.png'
-import historyModern from '../assets/history-modern.png'
+import historyLegacy from '../assets/Entrance.jpg'
+import historyModern from '../assets/Campus-1.jpg'
 
 
 
@@ -128,12 +128,24 @@ export default function AboutPage() {
             </p>
             <div className="history-stats">
               <div className="history-stat">
-                <span className="history-stat__num">135+</span>
-                <span className="history-stat__label">Years of Legacy</span>
+                <span className="history-stat__num">2003</span>
+                <span className="history-stat__label">Year of Establishment</span>
               </div>
               <div className="history-stat">
-                <span className="history-stat__num">900+</span>
-                <span className="history-stat__label">Institutions Pan-India</span>
+                <span className="history-stat__num">Co-ed</span>
+                <span className="history-stat__label">Type of School</span>
+              </div>
+              <div className="history-stat">
+                <span className="history-stat__num">English</span>
+                <span className="history-stat__label">Medium of Instruction</span>
+              </div>
+              <div className="history-stat">
+                <span className="history-stat__num">1,932</span>
+                <span className="history-stat__label">Total Students</span>
+              </div>
+              <div className="history-stat">
+                <span className="history-stat__num">35</span>
+                <span className="history-stat__label">Class Strength</span>
               </div>
             </div>
           </div>

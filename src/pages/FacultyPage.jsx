@@ -33,9 +33,7 @@ export default function FacultyPage() {
 
                 <div className="faculty-hero__content">
                     <p className="eyebrow eyebrow--light">Academic leadership</p>
-
                     <h1>Our Faculty</h1>
-
                     <p>
                         Meet the educators, mentors, and academic leaders shaping
                         confident learners through expertise, care, and innovation.
@@ -43,11 +41,31 @@ export default function FacultyPage() {
                 </div>
             </section>
 
+            {/* FACULTY STATS */}
+            <section className="faculty-stats-grid reveal">
+                <div className="profile-container">
+                    <div className="profile-card">
+                        <div className="profile-icon">👩‍🏫</div>
+                        <h3>110</h3>
+                        <p>Teaching Staff</p>
+                    </div>
+                    <div className="profile-card">
+                        <div className="profile-icon">🛠️</div>
+                        <h3>55</h3>
+                        <p>Non-Teaching Staff</p>
+                    </div>
+                    <div className="profile-card">
+                        <div className="profile-icon">🤝</div>
+                        <h3>1:18</h3>
+                        <p>Teacher-Student Ratio</p>
+                    </div>
+                </div>
+            </section>
+
             {/* INTRO */}
             <section className="faculty-intro">
                 <div className="section-heading">
                     <p className="eyebrow">Teaching excellence</p>
-
                     <h2>Educators who inspire learning beyond classrooms</h2>
                 </div>
 
@@ -80,8 +98,8 @@ export default function FacultyPage() {
                         key={faculty.id}
                         type="button"
                         className={`faculty-featured__card ${index === 0
-                                ? 'faculty-featured__card--primary'
-                                : ''
+                            ? 'faculty-featured__card--primary'
+                            : ''
                             }`}
                         onClick={() => setActiveFacultyId(faculty.id)}
                     >
@@ -128,26 +146,7 @@ export default function FacultyPage() {
                 ))}
             </section>
 
-            {/* CTA */}
-            <section className="faculty-cta">
-                <div>
-                    <p className="eyebrow eyebrow--light">
-                        Meet our academic team
-                    </p>
 
-                    <h2>Want to learn more about our educators?</h2>
-                </div>
-
-                <div className="facility-cta__actions">
-                    <button className="button button--light" type="button">
-                        Schedule a Visit
-                    </button>
-
-                    <button className="button facility-cta__ghost" type="button">
-                        Explore Academics
-                    </button>
-                </div>
-            </section>
 
             {/* LIGHTBOX */}
             {activeFaculty ? (

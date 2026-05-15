@@ -1,12 +1,12 @@
 export const navItems = [
   { id: 'home', label: 'Home' },
-  { id: 'academics', label: 'Academics' },
-  { id: 'documents', label: 'Documents' },
-  { id: 'facilities', label: 'Facilities' },
-  { id: 'gallery', label: 'Gallery' },
-  { id: 'admissions', label: 'Admissions' },
-  { id: 'faculty-staff', label: 'Faculty' },
   { id: 'about-us', label: 'About Us' },
+  { id: 'academics', label: 'Academics' },
+  { id: 'admissions', label: 'Admissions' },
+  { id: 'facilities', label: 'Infrastructure' },
+  { id: 'gallery', label: 'Gallery' },
+  { id: 'faculty-staff', label: 'Faculty' },
+  { id: 'documents', label: 'Mandatory Disclosure' },
   { id: 'contact-us', label: 'Contact Us' }
 ]
 
@@ -18,7 +18,7 @@ export const achievements = [
   },
   { value: '98%', title: 'Board success rate' },
   { value: '45+', title: 'Inter-school awards' },
-  { value: '12:1', title: 'Student mentor ratio' },
+  { value: '1:18', title: 'Teacher-Student Ratio' },
 ]
 
 export const facilities = [
@@ -45,52 +45,73 @@ export const facilities = [
 ]
 
 export const leaders = [
-  { name: 'Dr. Rajiv Mehta', role: 'Chairman', tone: 'leader-card--navy' },
-  { name: 'Ms. Aditi Sharma', role: 'Principal', tone: 'leader-card--amber' },
-  { name: 'Mr. Vivek Suri', role: 'Vice Principal', tone: 'leader-card--slate' },
+  { name: 'Sri N. Sachiddananda Murthy', role: 'Chairman', tone: 'leader-card--navy' },
+  { name: 'Sri R. Anand', role: 'Secretary', tone: 'leader-card--amber' },
+  { name: 'Smt Jayashree S. Murthy', role: 'C.E.O', tone: 'leader-card--slate' },
+  { name: 'Smt Dr. Kavya Shree Basappa', role: 'Principal', tone: 'leader-card--slate' },
 ]
 
-export const repositoryDocuments = [
-  {
-    tag: 'Legal & Statutory',
-    title: 'Affiliation Letter (CBSE)',
-    meta: 'Last updated: March 2024',
-    size: 'File size: 1.2 MB',
-  },
-  {
-    tag: 'Organization',
-    title: 'Trust/Society Registration Certificate',
-    meta: 'Valid until: Dec 2028',
-    size: 'File size: 850 KB',
-  },
-  {
-    tag: 'Government Approvals',
-    title: 'NOC (No Objection Certificate)',
-    meta: 'Issued by State Education Dept',
-    size: 'File size: 1.1 MB',
-  },
-  {
-    tag: 'Safety & Compliance',
-    title: 'Building Safety Certificate',
-    meta: 'Renewed for session 2024-25',
-    size: 'File size: 940 KB',
-  },
-]
-
-export const repositorySafety = [
-  {
-    title: 'Fire Safety Certificate',
-    description:
-      'Official clearance from the local fire department regarding onsite prevention and response infrastructure.',
-    status: 'Expires Jan 2025',
-  },
-  {
-    title: 'Water & Sanitation',
-    description:
-      'Laboratory test reports for potable water quality and certified health hygiene audit results.',
-    status: 'Audited Q4 2023',
-  },
-]
+export const mandatoryDisclosure = {
+  generalInformation: [
+    { label: 'Name of the School', value: 'Dayananda Arya Vidya Public School' },
+    { label: 'Affiliation No.', value: '830243' },
+    { label: 'School Code', value: '41063' },
+    { label: 'Complete Address', value: 'Mananthavadi Rd, Industrial Suburb, Vishweshwaranagar, III Stage, Vidyaranyapura, Visveshwara Nagar, Mysuru 570008' },
+    { label: 'Principal Name & Qualification', value: 'Smt. Kavya Shree Basappa, P.hD' },
+    { label: 'School Email ID', value: 'dav_mysore@rediffmail.com' },
+    { label: 'Contact Details', value: '0821 248 8429' }
+  ],
+  documents: [
+    { sl: 1, title: 'Mandatory Disclosure  CBSE SARAS', link: '#' },
+    { sl: 2, title: 'Copies of affiliation / upgradation letter and recent extension of affiliation, if any', link: '/pdf/Affiliation_Certificate___1_.pdf' },
+    { sl: 3, title: 'Copies of Societies / Trust registration/ renewal certificate as applicable', link: '/pdf/Deed-of-amendment-of-trust.pdf' },
+    { sl: 4, title: 'Copy of No Objection Certificate issued, if applicable by the state Govt', link: '/pdf/NOC.pdf' },
+    { sl: 5, title: 'Copies of Recognition Certificate under RTE Act, 2009 and its renewal, if applicable', link: '#' },
+    { sl: 6, title: 'Copy of Valid Building Safety Certificate as per the National Building Code', link: '/pdf/Building-Safety-Certificate_2024__1___1__2026.pdf' },
+    { sl: 7, title: 'Copy of valid Fire Safety Certificate issued by the Competent Authority', link: '/pdf/fire_safety_new_2026_.pdf' },
+    { sl: 8, title: 'Copy of the DEO Certificate submitted by the school for affiliation/ upgradation/extension of affiliation or self-certification by school', link: '#' },
+    { sl: 9, title: 'Copies of valid Water, Health and Sanitation Certificates', link: '/pdf/SAFE_DRINKING_WATER_AND_SANITARY_2025-26.pdf' },
+    { sl: 10, title: 'Self Certification Affiliation/Upgradation/Extension of Affiliation', link: '/pdf/Extension-of-provisional-affiliation.pdf' },
+    { sl: 11, title: 'Land Certificate', link: '/pdf/land_certificate_26-27_new.pdf' },
+    { sl: 12, title: 'Fee Structure', link: '#' },
+    { sl: 13, title: 'Academic Calendar', link: '#' }
+  ],
+  resultsAndAcademics: [
+    {
+      sl: 1,
+      title: 'Last three-year result of the Board Examinations as per applicability',
+      path: '2022 – 23 : 100%\n2023 – 24 : 97.95%\n2024 – 25 : 100%'
+    },
+    {
+      sl: 2,
+      title: 'RESULTS OF CLASS X: – Annual Report 2024 – 25',
+      path: '100%'
+    }
+  ],
+  staff: [
+    { label: 'Principal', value: '1' },
+    { label: 'Total No. of Teachers', value: '45' },
+    { label: 'PGT', value: '0' },
+    { label: 'TGT', value: '18' },
+    { label: 'PRT', value: '22' },
+    { label: 'Teachers Section Ratio', value: '1:1.5' },
+    { label: 'Details of Special Educator', value: 'Smt. Roopa S' },
+    { label: 'Details of Counsellor and Wellness Teacher', value: 'Smt. Deepa M' }
+  ],
+  infrastructure: [
+    { label: 'Total Campus Area (in sq. mtrs.)', value: '11891.589 Sq meters' },
+    { label: 'Built-up Area (in sq. mtrs.)', value: '4500 Sq meters (Approx.)' },
+    { label: 'No. and Size of Class Rooms (in sq. mtrs.)', value: '64 Classrooms' },
+    { label: 'Laboratories Available', value: 'Physics, Chemistry, Biology & Computer Labs (Fully Equipped)' },
+    { label: 'Library Details (No. of Books)', value: 'Available with vast collection' },
+    { label: 'Sports Facilities', value: 'Volleyball, Cricket, Badminton, Basketball, Swimming, Athletics, Kho-Kho, Kabbadi, Chess, Yoga, Archery, Rifle shooting' },
+    { label: 'Transport Facilities', value: 'Yes (Safe & GPS Enabled)' },
+    { label: 'Internet Facility (Y/N)', value: 'Yes' },
+    { label: 'No. of Girls Toilets', value: '25' },
+    { label: 'No. of Boys Toilets', value: '25' },
+    { label: 'Link of YouTube Video of the Inspection of School Covering the Infrastructure of the School', value: 'https://youtube.com/davmysuru' }
+  ]
+}
 
 export const admissionJourney = [
   {
@@ -171,6 +192,16 @@ export const formSteps = [
   { step: '03', eyebrow: 'Then', title: 'Parents' },
   { step: '04', eyebrow: 'Finally', title: 'Upload' },
 ]
+
+export const academicOverview = {
+  classesOffered: 'Pre-KG to Grade X',
+  streams: 'General Schooling (Integrated Curriculum)',
+  subjects: [
+    'English', 'Hindi', 'Kannada', 'Mathematics',
+    'Science', 'Social Science', 'Artificial Intelligence'
+  ],
+  examinationSystem: 'As per the CBSE Board Pattern'
+}
 
 export const academicSections = [
   {

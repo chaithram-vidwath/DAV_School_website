@@ -1,70 +1,139 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { achievements, facilities, leaders } from '../data/siteData'
+import Chairman from '../assets/N.SACHIDANANDA-MURTHY-CHAIRMAN.jpg'
+import Secretary from '../assets/R.ANAND-SECRETARY.jpg'
+import CEO from '../assets/JAYASHREE.S.MURTHY-C.E.O.jpg'
+import Principal from '../assets/Principal-Kavya-Shree-Basappa.jpg'
+import entranceImg from '../assets/Entrance.jpg'
+import labImg from '../assets/ScienceLab.jpg'
+import busImg from '../assets/School-Bus.jpg'
+import playgroundImg from '../assets/sportsstadium.jpg'
+import { useState, useEffect } from 'react'
 
 export default function HomePage({ onNavigate }) {
   useScrollReveal()
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const slides = [
+    {
+      image: entranceImg,
+      title: "Nurturing Minds, Shaping Futures.",
+      subtitle: "Welcome to D.A.V. Public School, Mysuru. We blend Vedic values with modern scientific temperament."
+    },
+    {
+      image: labImg,
+      title: "Fueling Scientific Curiosity",
+      subtitle: "Our advanced laboratories provide a hands-on environment for research, innovation, and discovery."
+    },
+    {
+      image: busImg,
+      title: "Safe & Reliable Transport",
+      subtitle: "A fleet of well-maintained school buses ensures a secure and comfortable commute for every student."
+    },
+    {
+      image: playgroundImg,
+      title: "Excellence on the Field",
+      subtitle: "Expansive playgrounds and sports facilities to foster teamwork, health, and athletic spirit."
+    }
+  ]
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [slides.length])
+
+  const leaderImages = {
+    'Sri N. Sachiddananda Murthy': Chairman,
+    'Sri R. Anand': Secretary,
+    'Smt Jayashree S. Murthy': CEO,
+    'Smt Dr. Kavya Shree Basappa': Principal
+  }
 
   return (
     <main className="homepage">
-      <section className="hero">
-        <div className="hero__copy">
-          <p className="eyebrow">Est. 1886 | Legacy of Excellence</p>
-          <h1>
-            Nurturing Minds,
-            <br />
-            Shaping Futures.
-          </h1>
-          <p>
-            Combining Vedic values with modern scientific temperament to create
-            the global citizens of tomorrow.
-          </p>
-          <div className="hero__actions">
-            <button
-              className="button button--solid"
-              type="button"
-              onClick={() => onNavigate('admissions')}
-            >
-              Admissions 2024-25
-            </button>
-            <button className="button button--ghost" type="button">
-              Virtual Tour
-            </button>
+      {/* HERO CAROUSEL */}
+      <section className="hero-carousel">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${slide.image})` }}
+          >
+            <div className="hero__overlay" />
+            <div className="hero__copy">
+              <p className="eyebrow eyebrow--light">Est. 2003 | Legacy of Excellence</p>
+              <h1 className="color-white">{slide.title}</h1>
+              <p className="hero-description-light">{slide.subtitle}</p>
+              <div className="hero__actions">
+                <button
+                  className="button button--solid admissions-pill-bar"
+                  onClick={() => onNavigate('admissions')}
+                >
+                  ADMISSIONS 2026-27
+                </button>
+              </div>
+            </div>
           </div>
+        ))}
+
+        {/* Carousel Indicators */}
+        <div className="carousel-dots">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
-        <div className="hero__deco hero__deco--1" aria-hidden="true" />
-        <div className="hero__deco hero__deco--2" aria-hidden="true" />
-        <div className="hero__deco hero__deco--3" aria-hidden="true" />
+
+        {/* Navigation Arrows */}
+        <button
+          className="carousel-arrow carousel-arrow--prev"
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+          aria-label="Previous slide"
+        >
+          ‹
+        </button>
+        <button
+          className="carousel-arrow carousel-arrow--next"
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+          aria-label="Next slide"
+        >
+          ›
+        </button>
       </section>
 
-      <section className="principal-section">
-        <div className="principal-section__portrait" aria-hidden="true" />
-
-        <div className="principal-section__content">
-          <div className="quote-card">
-            <p className="color-white">
-              “We believe every child deserves an education that grows both
-              character and capability.”
-            </p>
+      {/* Principal's Message Section (About Page Style) */}
+      <section className="home-principal-featured reveal" style={{ padding: '4rem 0' }}>
+        <article className="principal-card-expanded">
+          <div className="principal-card-expanded__image">
+            <div
+              className="portrait-frame"
+              style={{
+                background: `url(${Principal}) center/cover no-repeat`
+              }}
+            ></div>
           </div>
-
-          <p className="eyebrow">Leadership Greeting</p>
-          <h2>From the Principal&apos;s Desk</h2>
-          <div className="principal-copy">
+          <div className="principal-card-expanded__content">
+            <div className="quote-icon">“</div>
+            <p className="eyebrow">Leadership Greeting</p>
+            <h2>Message from the Principal</h2>
             <p>
-              It is my distinct privilege to lead an institution that stands as
-              a beacon of academic rigor and cultural heritage. At DAV Public
-              School, we believe that education extends beyond the four walls of
-              a classroom.
+              "At D.A.V. Public School, we believe every child is unique.
+              Our focus is to create a stimulating learning environment that promotes
+              intellectual growth, emotional well-being, and moral responsibility
+              through a strong partnership between school and parents."
             </p>
-            <p>
-              Our curriculum is meticulously designed to foster critical
-              thinking, emotional intelligence, and a deep-seated respect for
-              our traditions. We invite you to be part of a community where
-              every child is seen, heard, and empowered to excel.
-            </p>
-            <p className="principal-signoff">— Dr. Anita Sharma, Ph.D.</p>
+            <div className="principal-info">
+              <strong>Smt. Dr. Kavya Shree Basappa</strong>
+              <span>Principal, DAV Public School</span>
+            </div>
           </div>
-        </div>
+        </article>
       </section>
 
       <section className="achievements-section">
@@ -119,7 +188,11 @@ export default function HomePage({ onNavigate }) {
         <div className="leaders-grid">
           {leaders.map((leader) => (
             <article className={`leader-card ${leader.tone}`} key={leader.name}>
-              <div className="leader-card__portrait" aria-hidden="true" />
+              <div
+                className="leader-card__portrait"
+                aria-hidden="true"
+                style={{ background: `url(${leaderImages[leader.name]}) center/cover no-repeat` }}
+              />
               <div className="leader-card__meta">
                 <h3>{leader.name}</h3>
                 <p>{leader.role}</p>
@@ -136,13 +209,6 @@ export default function HomePage({ onNavigate }) {
           Visit the campus, speak with our team, and understand how the DAV
           approach supports both academic and personal development.
         </p>
-        <button
-          className="button button--light"
-          type="button"
-          onClick={() => onNavigate('admissions')}
-        >
-          Schedule a Campus Visit
-        </button>
       </section>
     </main>
   )
