@@ -4684,8 +4684,8 @@ section.reveal--active {
 
 /* Specific overrides for sections that need different padding */
 .about-page .about-hero {
-  max-width: none;
-  padding: 4rem var(--page-pad) 3rem;
+  max-width: 1500px;
+  padding: 0px;
 }
 
 .about-page .vision-mission,
