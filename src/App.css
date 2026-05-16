@@ -4745,16 +4745,20 @@ section.reveal--active {
 
 .about-hero {
   position: relative;
-  min-height: 35vh;
-  display: grid;
-  place-items: center;
-  background:
-    linear-gradient(135deg,
-      rgba(0, 77, 79, 0.95),
-      rgba(0, 51, 53, 0.88)),
-    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  min-height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
-  border-bottom: 4px solid var(--gold);
+  border-radius: 0 0 2rem 2rem;
+  margin-inline: calc(var(--page-pad) * -1);
+  background:
+    linear-gradient(135deg, rgba(0, 105, 107, 0.9), rgba(0, 77, 79, 0.95)),
+    url('https://images.unsplash.com/photo-1523050335391-4b7016147291?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
 
@@ -4767,7 +4771,7 @@ section.reveal--active {
 }
 
 .about-hero__content h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: 32px;
   line-height: 1.1;
   font-weight: 800;
   margin-bottom: 1rem;
