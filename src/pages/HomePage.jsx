@@ -127,34 +127,65 @@ export default function HomePage({ onNavigate }) {
         </div>
       </section>
 
-      {/* LEADERSHIP GREETING - Two-Box Vertical Stack Design */}
-      <section className="principal-box-stack-section">
-        <div className="principal-box-stack-grid">
-          {/* THE TWO BOXES: Image Box + Name Box */}
-          <div className="principal-profile-unit">
-            <article className="profile-image-box">
-              <div 
-                className="profile-portrait-sharp" 
+      {/* LEADERSHIP GREETING - Staggered Overlapping Design */}
+      <section className="principal-staggered-section">
+        <div className="principal-staggered-grid">
+          {/* THE STAGGERED PROFILE UNIT */}
+          <div className="profile-staggered-pair">
+            <article className="stagger-card stagger-card--image">
+              <div
+                className="portrait-sharp-stagger"
                 style={{ backgroundImage: `url(${Principal})` }}
               />
             </article>
-            <article className="profile-name-box">
-              <strong className="profile-name-text">Smt. Dr. Kavya Shree Basappa</strong>
-              <span className="profile-role-text">Principal, DAV Public School</span>
+            <article className="stagger-card stagger-card--name">
+              <strong className="stagger-name">Smt. Dr. Kavya Shree Basappa</strong>
+              <span className="stagger-role">Principal, DAV Public School</span>
             </article>
           </div>
 
-          {/* THE MESSAGE CARD: Green Institutional Card */}
-          <article className="principal-greeting-card">
-            <div className="card-quote-mark">“</div>
-            <p className="eyebrow eyebrow--light">Leadership Greeting</p>
-            <h2 className="heading-white">Message from the Principal</h2>
-            <div className="message-paragraph-white">
+          {/* THE MESSAGE CONTENT */}
+          <div className="principal-staggered-message">
+            <p className="eyebrow">Leadership Greeting</p>
+            <h2 className="heading-teal">Message from the Principal</h2>
+            <div className="message-text-staggered">
               <p>
                 "At DAV Public School, we believe every child is unique. Our focus is to create a stimulating learning environment that promotes intellectual growth, emotional well-being, and moral responsibility through a strong partnership between school and parents."
               </p>
             </div>
-          </article>
+          </div>
+        </div>
+      </section>
+      {/* Academic Profile Grid - Home Page Version */}
+      <section className="home-academic-grid reveal">
+        <div className="home-profile-container">
+          <div className="home-profile-card">
+            <div className="home-profile-icon">🎓</div>
+            <h3>Pre-KG to Grade X</h3>
+            <p>Classes Offered</p>
+          </div>
+          <div className="home-profile-card">
+            <div className="home-profile-icon">📜</div>
+            <h3>CBSE Board Pattern</h3>
+            <p>Examination System</p>
+          </div>
+          <div className="home-profile-card">
+            <div className="home-profile-icon">👥</div>
+            <h3>1,932</h3>
+            <p>Total Students</p>
+          </div>
+          <div className="home-profile-card">
+            <div className="home-profile-icon">📏</div>
+            <h3>35</h3>
+            <p>Class Strength</p>
+          </div>
+          <div className="home-profile-card home-profile-card--wide">
+            <div className="home-profile-icon">📚</div>
+            <div className="home-profile-details">
+              <h3>Core Subjects</h3>
+              <p>English, Hindi, Kannada, Mathematics, Science, Social Science & Artificial Intelligence</p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -74,7 +74,8 @@ export const mandatoryDisclosure = {
     { sl: 10, title: 'Self Certification Affiliation/Upgradation/Extension of Affiliation', link: '/pdf/Extension-of-provisional-affiliation.pdf' },
     { sl: 11, title: 'Land Certificate', link: '/pdf/land_certificate_26-27_new.pdf' },
     { sl: 12, title: 'Fee Structure', link: '#' },
-    { sl: 13, title: 'Academic Calendar', link: '#' }
+    { sl: 13, title: 'Academic Calendar', link: '#' },
+    { sl: 14, title: 'TC-FORMAT', link: '/pdf/TC-FORMAT__1_2026.pdf' }
   ],
   resultsAndAcademics: [
     {
