@@ -21,18 +21,6 @@ export default function AdmissionsPage({ onStartApplication }) {
             young minds to embark on a journey of excellence, character, and
             lifelong learning.
           </p>
-          <div className="admissions-hero__actions">
-            <button
-              className="button button--admissions-primary"
-              type="button"
-              onClick={onStartApplication}
-            >
-              Start Your Application
-            </button>
-            <button className="button button--admissions-secondary" type="button">
-              Download Admission Policy
-            </button>
-          </div>
         </div>
       </section>
 

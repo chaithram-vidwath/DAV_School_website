@@ -395,7 +395,8 @@ html {
 .facilities-page,
 .gallery-page,
 .contact-page,
-.academics-page {
+.academics-page,
+.faculty-page {
   width: min(100%, var(--content-max));
   margin: 0 auto;
   padding-left: var(--page-pad);
@@ -610,7 +611,8 @@ html {
   padding-bottom: 5rem;
 }
 
-.gallery-page {
+.gallery-page,
+.faculty-page {
   display: grid;
   gap: 4rem;
   padding-top: 0;
@@ -840,12 +842,12 @@ html {
 
 .gallery-hero {
   position: relative;
-  min-height: 32rem;
+  min-height: 16rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 0 0 2rem 2rem;
   text-align: center;
 }
 
@@ -889,13 +891,14 @@ html {
 
 .academics-hero {
   position: relative;
-  min-height: 44rem;
+  min-height: 16rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  border-radius: 0 0 1.5rem 1.5rem;
   text-align: center;
+  overflow: hidden;
+  border-radius: 0 0 2rem 2rem;
+  margin-inline: calc(var(--page-pad) * -1);
   margin-bottom: 4rem;
 }
 
@@ -921,14 +924,14 @@ html {
 }
 
 .academics-hero__content h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: 49px;
   margin: 1rem 0;
   line-height: 1;
   font-family: var(--serif);
 }
 
 .academics-hero__content p {
-  font-size: 1.25rem;
+  font-size: 17px;
   opacity: 0.9;
   line-height: 1.6;
 }
@@ -2121,12 +2124,15 @@ html {
 
 .admissions-hero {
   position: relative;
-  min-height: 44rem;
-  display: flex;
+  min-height: 16rem;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  border-radius: 0 0 2rem 2rem;
 }
 
 
@@ -2151,9 +2157,11 @@ html {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
   width: 100%;
-  padding: 6rem 32px 5rem;
+  max-width: 52rem;
+  padding: 2rem;
+  margin: 0 auto;
 }
 
 .admissions-badge {
@@ -2167,23 +2175,24 @@ html {
   font-size: 0.625rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin: 0 auto;
 }
 
 .admissions-hero h1 {
-  margin: 0;
-  max-width: 10ch;
+  margin: 0 auto;
+  max-width: none;
   font-family: var(--serif);
-  font-size: clamp(3rem, 10vw, 5rem);
+  font-size: 48px;
   line-height: 1.15;
   font-weight: 400;
   color: #fff;
 }
 
 .admissions-hero p {
-  margin: 0;
-  max-width: 36rem;
+  margin: 0 auto;
+  max-width: 60rem;
   color: rgba(255, 255, 255, 0.97);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.62;
   font-weight: 500;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
@@ -2195,6 +2204,7 @@ html {
   width: 100%;
   max-width: 26rem;
   padding-top: 0.5rem;
+  margin: 0 auto;
 }
 
 .button--admissions-primary {
@@ -3210,11 +3220,6 @@ html {
     padding: 3rem 2rem;
   }
 
-  .admissions-hero {
-    min-height: 49rem;
-  }
-
-  .admissions-hero__content,
   .admissions-journey,
   .admissions-dates,
   .admissions-eligibility,
@@ -3224,7 +3229,9 @@ html {
   }
 
   .admissions-hero__actions {
-    max-width: 42rem;
+    display: flex;
+    justify-content: center;
+    max-width: none;
   }
 
   .admissions-journey__grid,
@@ -3691,17 +3698,12 @@ section.reveal--active {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .admissions-hero__content,
   .admissions-journey,
   .admissions-dates,
   .admissions-eligibility,
   .admissions-documents {
     padding-left: 32px;
     padding-right: 32px;
-  }
-
-  .admissions-hero__content {
-    max-width: 48rem;
   }
 
   .admissions-journey__grid {
@@ -3828,7 +3830,7 @@ section.reveal--active {
 }
 
 .contact-hero__content h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: 54px;
   margin: 1rem 0;
   font-family: var(--serif);
   line-height: 1;
@@ -4031,14 +4033,7 @@ section.reveal--active {
    FACULTY PAGE
 ==================================== */
 
-.faculty-page {
-  width: 100%;
-  background: #f4f7fb;
-  color: #111827;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-  padding-bottom: 5rem;
-}
+/* faculty-page container styles are handled with gallery-page at lines 392 and 613 */
 
 /* ====================================
    HERO SECTION
@@ -4046,54 +4041,51 @@ section.reveal--active {
 
 .faculty-hero {
   position: relative;
-  min-height: 40vh;
-  margin: 2rem auto;
-  width: min(92%, 1200px);
+  min-height: 16rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 2rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 2rem 2rem;
+  text-align: center;
 }
 
 .faculty-hero__visual {
   position: absolute;
   inset: 0;
-  background:
-    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") center/cover no-repeat;
 }
 
 .faculty-hero__overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(135deg,
-      rgba(10, 20, 40, 0.8),
-      rgba(30, 64, 175, 0.65));
+  background: radial-gradient(circle at center, transparent 0%, rgba(11, 28, 48, 0.4) 100%);
 }
 
 .faculty-hero__content {
   position: relative;
-  z-index: 2;
-  text-align: center;
+  z-index: 1;
+  display: grid;
+  gap: 1.25rem;
   width: 100%;
-  max-width: 700px;
-  color: white;
-  padding: 40px 20px;
+  max-width: 52rem;
+  padding: 2rem;
 }
 
 .faculty-hero__content h1 {
-  font-size: 5rem;
-  line-height: 1;
-  margin: 20px 0;
-  font-weight: 700;
+  margin: 0;
+  font-family: var(--serif);
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.98;
 }
 
-.faculty-hero__content p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  opacity: 0.92;
+.faculty-hero__content p:last-child {
+  margin: 0 auto;
+  max-width: 36rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  line-height: 1.65;
 }
 
 /* ====================================
@@ -4138,8 +4130,9 @@ section.reveal--active {
 ==================================== */
 
 .faculty-intro {
-  padding: 100px 8% 60px;
   text-align: center;
+  display: grid;
+  gap: 1.25rem;
 }
 
 .faculty-intro__copy {
@@ -4159,7 +4152,6 @@ section.reveal--active {
   justify-content: center;
   flex-wrap: wrap;
   gap: 18px;
-  padding: 20px 8% 70px;
 }
 
 .faculty-filter {
@@ -4190,7 +4182,6 @@ section.reveal--active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  padding: 0 8% 100px;
 }
 
 .faculty-featured__card {
@@ -4246,7 +4237,6 @@ section.reveal--active {
 ==================================== */
 
 .faculty-grid {
-  padding: 0 8% 120px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
@@ -4306,11 +4296,9 @@ section.reveal--active {
 ==================================== */
 
 .faculty-cta {
-  background:
-    linear-gradient(135deg,
-      var(--teal));
-
-  padding: 90px 8%;
+  background: linear-gradient(135deg, #0b6b6d 0%, #0a5c5f 100%);
+  padding: 4rem 3rem;
+  border-radius: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4463,10 +4451,6 @@ section.reveal--active {
 }
 
 @media (max-width: 500px) {
-  .faculty-hero {
-    height: 70vh;
-  }
-
   .faculty-hero__content h1 {
     font-size: 2.6rem;
   }
