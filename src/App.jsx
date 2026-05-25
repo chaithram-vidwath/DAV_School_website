@@ -9,7 +9,7 @@ import FacilitiesPage from './pages/FacilitiesPage'
 import GalleryPage from './pages/GalleryPage'
 import HomePage from './pages/HomePage'
 import ContactPage from './pages/ContactPage'
-import FacultyPage from './pages/FacultyPage'
+// import FacultyPage from './pages/FacultyPage'
 import AboutPage from './pages/AboutPage'
 import AcademicsPage from './pages/AcademicsPage'
 import Footer from './components/Footer'
@@ -76,8 +76,6 @@ function App() {
         <AdmissionsPage onStartApplication={() => setActivePage('application-form')} />
       ) : activePage === 'contact-us' ? (
         <ContactPage />
-      ) : activePage === 'faculty-staff' ? (
-        <FacultyPage />
       ) : activePage === 'about-us' ? (
         <AboutPage />
       ) : activePage === 'academics' ? (

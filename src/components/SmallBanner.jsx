@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SmallBanner = () => {
   return (
     <div className="small-banner-wrapper">

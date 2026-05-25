@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = ({ onNavigate }) => {
   return (
     <footer className="footer-stepped">
@@ -12,7 +10,7 @@ const Footer = ({ onNavigate }) => {
           <button onClick={() => onNavigate('facilities')}>Infrastructure</button>
           <button onClick={() => onNavigate('gallery')}>Gallery</button>
           <button onClick={() => onNavigate('documents')}>Mandatory Disclosure</button>
-          <button onClick={() => onNavigate('faculty-staff')}>Faculty</button>
+          {/* <button onClick={() => onNavigate('faculty-staff')}>Faculty</button> */}
           <button onClick={() => onNavigate('about-us')}>About Us</button>
           <button onClick={() => onNavigate('contact-us')}>Contact Us</button>
         </nav>

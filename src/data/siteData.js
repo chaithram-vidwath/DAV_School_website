@@ -5,7 +5,7 @@ export const navItems = [
   { id: 'admissions', label: 'Admissions' },
   { id: 'facilities', label: 'Infrastructure' },
   { id: 'gallery', label: 'Gallery' },
-  { id: 'faculty-staff', label: 'Faculty' },
+  // { id: 'faculty-staff', label: 'Faculty' },
   { id: 'documents', label: 'Mandatory Disclosure' },
   { id: 'contact-us', label: 'Contact Us' }
 ]
@@ -16,9 +16,9 @@ export const achievements = [
     title: 'Ranked top day school in the district',
     detail: 'Consistent board results, co-curricular depth, and strong parent trust.',
   },
-  { value: '98%', title: 'Board success rate' },
-  { value: '45+', title: 'Inter-school awards' },
-  { value: '1:18', title: 'Teacher-Student Ratio' },
+  { value: '100%', title: 'Board success rate' },
+  { value: '90+', title: 'Inter-school awards' },
+  { value: '1:20', title: 'Teacher-Student Ratio' },
 ]
 
 export const facilities = [
@@ -73,7 +73,7 @@ export const mandatoryDisclosure = {
     { sl: 9, title: 'Copies of valid Water, Health and Sanitation Certificates', link: '/pdf/SAFE_DRINKING_WATER_AND_SANITARY_2025-26.pdf' },
     { sl: 10, title: 'Self Certification Affiliation/Upgradation/Extension of Affiliation', link: '/pdf/Extension-of-provisional-affiliation.pdf' },
     { sl: 11, title: 'Land Certificate', link: '/pdf/land_certificate_26-27_new.pdf' },
-    { sl: 12, title: 'Fee Structure', link: '#' },
+    // { sl: 12, title: 'Fee Structure', link: '#' },
     { sl: 13, title: 'Academic Calendar', link: '#' },
     { sl: 14, title: 'TC-FORMAT', link: '/pdf/TC-FORMAT__1_2026.pdf' }
   ],
@@ -86,6 +86,11 @@ export const mandatoryDisclosure = {
     {
       sl: 2,
       title: 'RESULTS OF CLASS X: – Annual Report 2024 – 25',
+      path: '100%'
+    },
+    {
+      sl: 3,
+      title: 'RESULTS OF CLASS X: – Annual Report 2025 – 26',
       path: '100%'
     }
   ],
@@ -149,10 +154,10 @@ export const keyDates = [
 ]
 
 export const eligibilityRows = [
-  { grade: 'Nursery', min: '3+', max: '4+' },
-  { grade: 'KG', min: '4+', max: '5+' },
-  { grade: 'Prep', min: '5+', max: '6+' },
-  { grade: 'Grade I', min: '6+', max: '7+' },
+  { grade: 'Nursery', min: '3 and 3+', max: '4 and 4+' },
+  { grade: 'KG', min: '4 and 4+', max: '5 and 5+' },
+  { grade: 'Prep', min: '5 and 5+', max: '6 and 6+' },
+  { grade: 'Grade I', min: '6 and 6+', max: '7 and 7+' },
 ]
 
 export const mandatoryDocuments = [
@@ -318,7 +323,7 @@ export const galleryItems = [
     tone: 'gallery-card--music',
   },
   {
-    id: 'prize-ceremony',
+    id: 'achievements1',
     category: 'achievements',
     title: 'Recognition and award moments',
     caption: 'Celebrating effort, excellence, and student achievement across disciplines.',
@@ -326,13 +331,38 @@ export const galleryItems = [
     tone: 'gallery-card--award',
   },
   {
-    id: 'art-wall',
-    category: 'arts',
-    title: 'Student artwork on display',
-    caption: 'Corridor exhibits that turn everyday spaces into living creative galleries.',
-    size: 'gallery-card--square',
-    tone: 'gallery-card--art',
+    id: 'achievements2',
+    category: 'achievements',
+    title: 'Recognition and award moments',
+    caption: 'Celebrating effort, excellence, and student achievement across disciplines.',
+    size: 'gallery-card--tall',
+    tone: 'gallery-card--award',
   },
+  {
+    id: 'achievements3',
+    category: 'achievements',
+    title: 'Recognition and award moments',
+    caption: 'Celebrating effort, excellence, and student achievement across disciplines.',
+    size: 'gallery-card--tall',
+    tone: 'gallery-card--award',
+  },
+  {
+    id: 'achievements4',
+    category: 'achievements',
+    title: 'Recognition and award moments',
+    caption: 'Celebrating effort, excellence, and student achievement across disciplines.',
+    size: 'gallery-card--tall',
+    tone: 'gallery-card--award',
+  },
+
+  // {
+  //   id: 'art-wall',
+  //   category: 'arts',
+  //   title: 'Student artwork on display',
+  //   caption: 'Corridor exhibits that turn everyday spaces into living creative galleries.',
+  //   size: 'gallery-card--square',
+  //   tone: 'gallery-card--art',
+  // },
   {
     id: 'green-court',
     category: 'campus',
@@ -365,7 +395,78 @@ export const galleryItems = [
     size: 'gallery-card--square',
     tone: 'gallery-card--team',
   },
-
+  {
+    id: 'sports1',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
+  {
+    id: 'sports2',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
+  {
+    id: 'sports3',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
+  {
+    id: 'sports4',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
+  {
+    id: 'sports5',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
+  {
+    id: 'sports6',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
+  {
+    id: 'sports7',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
+  {
+    id: 'sports8',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
+  {
+    id: 'sports9',
+    category: 'sports',
+    title: 'Sports day in motion',
+    caption: 'House spirit, teamwork, and movement-driven confidence on the field.',
+    size: 'gallery-card--wide',
+    tone: 'gallery-card--field',
+  },
   {
     id: 'campus-entrance',
     category: 'infrastructure',
@@ -491,6 +592,62 @@ export const galleryItems = [
     caption: 'Well-stocked and regularly updated Library to encourage reading and research habits.',
     size: 'gallery-card--square',
     tone: 'gallery-card--library',
+  },
+  {
+    id: 'culture1',
+    category: 'arts',
+    title: 'Cultural Events',
+    caption: 'Corridor exhibits that turn everyday spaces into living creative galleries.',
+    size: 'gallery-card--square',
+    tone: 'gallery-card--culture',
+  },
+  {
+    id: 'culture2',
+    category: 'arts',
+    title: 'Cultural Events',
+    caption: 'Corridor exhibits that turn everyday spaces into living creative galleries.',
+    size: 'gallery-card--square',
+    tone: 'gallery-card--culture',
+  },
+  {
+    id: 'culture3',
+    category: 'arts',
+    title: 'Cultural Events',
+    caption: 'Corridor exhibits that turn everyday spaces into living creative galleries.',
+    size: 'gallery-card--square',
+    tone: 'gallery-card--culture',
+  },
+  {
+    id: 'culture4',
+    category: 'arts',
+    title: 'Cultural Events',
+    caption: 'Cultural events held at DAV Public School.',
+    size: 'gallery-card--square',
+    tone: 'gallery-card--culture',
+  },
+  {
+    id: 'culture5',
+    category: 'arts',
+    title: 'Cultural Events',
+    caption: 'Cultural events held at DAV Public School.',
+    size: 'gallery-card--square',
+    tone: 'gallery-card--culture',
+  },
+  {
+    id: 'culture6',
+    category: 'arts',
+    title: 'Cultural Events',
+    caption: 'Cultural events held at DAV Public School.',
+    size: 'gallery-card--square',
+    tone: 'gallery-card--culture',
+  },
+  {
+    id: 'culture7',
+    category: 'arts',
+    title: 'Cultural Events',
+    caption: 'Cultural events held at DAV Public School.',
+    size: 'gallery-card--square',
+    tone: 'gallery-card--culture',
   },
 ]
 

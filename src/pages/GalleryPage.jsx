@@ -20,6 +20,26 @@ import drillImg from '../assets/drill.jpg'
 import karateImg from '../assets/Karate.jpg'
 import auditoriumImg from '../assets/Music.jpg'
 import libraryInfraImg from '../assets/library.jpg'
+import culture1Img from '../assets/culture1.jpg'
+import culture2Img from '../assets/culture2.jpg'
+import culture3Img from '../assets/culture3.jpg'
+import culture4Img from '../assets/culture4.jpg'
+import culture5Img from '../assets/culture5.JPG'
+import culture6Img from '../assets/culture6.JPG'
+import culture7Img from '../assets/culture7.JPG'
+import achievementsImg1 from '../assets/achievements1.JPG'
+import achievementsImg2 from '../assets/achievements2.JPG'
+import achievementsImg3 from '../assets/achievements3.JPG'
+import achievementsImg4 from '../assets/achievements4.JPG'
+import sportImg1 from '../assets/sport1.JPG'
+import sportImg2 from '../assets/sport2.JPG'
+import sportImg3 from '../assets/sport3.JPG'
+import sportImg4 from '../assets/sport4.JPG'
+import sportImg5 from '../assets/sport5.JPG'
+import sportImg6 from '../assets/sport6.JPG'
+import sportImg7 from '../assets/sport7.JPG'
+import sportImg8 from '../assets/sport8.JPG'
+import sportImg9 from '../assets/sport22.JPG'
 
 const imageMap = {
   // --- Events ---
@@ -37,14 +57,34 @@ const imageMap = {
 
   // --- Sports ---
   'sports-day': sportsStadiumImg,       // sportsstadium.jpg
-  'team-huddle': karateImg,             // Karate.jpg
+  'team-huddle': karateImg,
+  'sports1': sportImg1,          // Karate.jpg
+  'sports2': sportImg2,         // Karate.jpg
+  'sports3': sportImg3,         // Karate.jpg
+  'sports4': sportImg4,         // Karate.jpg
+  'sports5': sportImg5,         // Karate.jpg
+  'sports6': sportImg6,         // Karate.jpg
+  'sports7': sportImg7,         // Karate.jpg
+  'sports8': sportImg8,         // Karate.jpg
+  'sports9': sportImg9,         // Karate.jpg
 
   // --- Arts ---
   'music-room': musicImg,               // Music.jpg (unique per category)
   'art-wall': danceStudioImg,           // dancestudio.jpg
+  'culture1': culture1Img,               // Music.jpg (unique per category)
+  'culture2': culture2Img,           // dancestudio.jpg
+  'culture3': culture3Img,               // Music.jpg (unique per category)
+  'culture4': culture4Img,           // dancestudio.jpg
+  'culture5': culture5Img,               // Music.jpg (unique per category)
+  'culture6': culture6Img,
+  'culture7': culture7Img,           // dancestudio.jpg
 
   // --- Achievements ---
-  'prize-ceremony': yogaImg,            // Yoga.jpg
+
+  'achievements1': achievementsImg1,            // Yoga.jpg
+  'achievements2': achievementsImg2,
+  'achievements3': achievementsImg3,
+  'achievements4': achievementsImg4,
 
   // --- Infrastructure (each uses its own unique image) ---
   'campus-entrance': entranceImg,       // same as corridor — unavoidable
