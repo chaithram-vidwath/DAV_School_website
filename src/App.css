@@ -5387,10 +5387,10 @@ section.reveal--active {
 .leaders-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
-  margin: 3rem auto 0;
-  justify-content: center;
+  justify-content: center !important;
+  gap: 2rem !important;
+  max-width: 700px !important;
+  margin: 3rem auto 0 !important;
 }
 
 .leader-card {
@@ -6614,6 +6614,686 @@ a {
     justify-content: center !important;
     border-radius: 8px !important;
   }
+
+  /* =========================================
+   TABLET RESPONSIVE FIX
+   768px → 1024px
+========================================= */
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    /* ---------- GLOBAL ---------- */
+
+    .page-shell,
+    .home-page,
+    .faculty-page,
+    .about-page {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    section {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    .topbar {
+      padding: 0.8rem 1rem !important;
+      gap: 1rem !important;
+      flex-wrap: wrap;
+    }
+
+    .main-nav {
+      gap: 0.4rem !important;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-link {
+      font-size: 0.78rem !important;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero-carousel {
+      height: 420px !important;
+    }
+
+    .hero-slide {
+      padding: 0 2rem 3rem 2rem !important;
+    }
+
+    .hero__copy {
+      max-width: 100% !important;
+    }
+
+    .hero__copy h1 {
+      font-size: 3rem !important;
+      line-height: 1.15 !important;
+    }
+
+    .hero-description-light {
+      font-size: 1.1rem !important;
+      max-width: 700px !important;
+    }
+
+    .hero__actions {
+      flex-wrap: wrap;
+    }
+
+    /* ---------- HOME PAGE ---------- */
+
+    .home-profile-container,
+    .facilities-grid,
+    .leaders-grid,
+    .faculty-grid,
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .home-profile-card--wide {
+      grid-column: span 2 !important;
+    }
+
+    /* ---------- FACULTY ---------- */
+
+    .faculty-featured {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
+
+    .faculty-featured__card--primary {
+      transform: none !important;
+    }
+
+    .faculty-card__image,
+    .faculty-featured__image {
+      height: 280px !important;
+    }
+
+    /* ---------- ABOUT ---------- */
+
+    .about-history__container,
+    .principal-card-expanded,
+    .principal-staggered-grid {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
+
+    .principal-card-expanded {
+      padding: 2rem !important;
+    }
+
+    .portrait-frame {
+      max-width: 340px !important;
+      height: 420px !important;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-content {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 2rem !important;
+    }
+
+    /* ---------- GALLERY ---------- */
+
+    .gallery-featured {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    .gallery-card--wide {
+      grid-column: span 1 !important;
+    }
+  }
+
+
+  /* =========================================
+   MOBILE FIX
+   BELOW 768px
+========================================= */
+
+  @media screen and (max-width: 768px) {
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .home-profile-container,
+    .leaders-grid,
+    .faculty-grid,
+    .gallery-grid,
+    .footer-content,
+    .facilities-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .hero-carousel {
+      height: 380px !important;
+    }
+
+    .hero__copy h1 {
+      font-size: 2.2rem !important;
+    }
+
+    .hero-description-light {
+      font-size: 1rem !important;
+    }
+
+    .faculty-featured {
+      grid-template-columns: 1fr !important;
+    }
+
+    .faculty-featured__card--primary {
+      transform: none !important;
+    }
+
+    .carousel-arrow {
+      display: none !important;
+    }
+  }
+
+  /* =====================================
+   MOBILE GALLERY FIX
+===================================== */
+
+  @media screen and (max-width: 768px) {
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr !important;
+      grid-auto-rows: auto !important;
+      gap: 1rem !important;
+    }
+
+    .gallery-card,
+    .gallery-card--wide,
+    .gallery-card--tall {
+      grid-column: span 1 !important;
+      grid-row: span 1 !important;
+
+      min-height: unset !important;
+      height: 260px !important;
+    }
+
+    .gallery-card__button,
+    .gallery-card__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .gallery-card__overlay {
+      padding: 1rem !important;
+    }
+
+    .gallery-card__content h3 {
+      font-size: 1rem !important;
+    }
+
+    .gallery-card__content p {
+      font-size: 0.85rem !important;
+    }
+
+    /* Featured section */
+
+    .gallery-featured {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: auto !important;
+    }
+
+    .gallery-featured__card {
+      height: 260px !important;
+    }
+  }
 }
 
 /* end of stylesheet */
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT REFINEMENTS
+   Layout-only overrides for tablet and mobile. Existing colors, animation,
+   imagery, and interactions are intentionally left unchanged.
+   ========================================================================== */
+
+@media screen and (min-width: 769px) and (max-width: 1150px) {
+  .page-shell {
+    --page-pad: clamp(24px, 4vw, 40px);
+  }
+
+  .repository-page,
+  .admissions-page,
+  .application-page,
+  .facilities-page,
+  .gallery-page,
+  .contact-page,
+  .academics-page,
+  .faculty-page {
+    width: 100%;
+    padding-left: var(--page-pad);
+    padding-right: var(--page-pad);
+  }
+
+  .topbar {
+    padding: 0.75rem var(--page-pad) !important;
+  }
+
+  .hero-carousel {
+    height: clamp(420px, 48vw, 500px) !important;
+  }
+
+  .hero-slide {
+    padding: 0 var(--page-pad) 3rem !important;
+  }
+
+  .hero__copy {
+    padding: 0;
+    max-width: 760px !important;
+  }
+
+  .hero__copy h1 {
+    font-size: clamp(2.6rem, 5vw, 3.75rem) !important;
+  }
+
+  .hero-description-light {
+    font-size: clamp(1.05rem, 2vw, 1.3rem) !important;
+    max-width: 680px !important;
+  }
+
+  .home-profile-container,
+  .profile-container,
+  .facilities-grid,
+  .leaders-grid,
+  .faculty-grid,
+  .gallery-grid,
+  .academics-pillars__grid,
+  .admissions-documents__grid,
+  .contact-info__grid,
+  .vision-mission__grid,
+  .values-grid,
+  .achievements-minimal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .home-profile-card--wide,
+  .profile-card--wide {
+    grid-column: span 2 !important;
+  }
+
+  .about-history__container,
+  .principal-staggered-grid,
+  .principal-card-expanded,
+  .academic-profile-grid,
+  .academics-environment,
+  .facilities-hero-v2,
+  .facility-narrative,
+  .facility-arts,
+  .faculty-featured,
+  .contact-form-section {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gallery-card--wide,
+  .gallery-card--tall {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  .gallery-grid {
+    grid-auto-rows: 260px !important;
+    align-items: stretch !important;
+  }
+
+  .gallery-grid .gallery-card,
+  .gallery-grid .gallery-card--wide,
+  .gallery-grid .gallery-card--tall {
+    min-height: 260px !important;
+    height: 260px !important;
+  }
+
+  .gallery-featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: minmax(340px, auto) minmax(260px, auto) !important;
+    grid-auto-rows: minmax(260px, auto) !important;
+    align-items: stretch !important;
+  }
+
+  .gallery-featured__card {
+    min-height: 260px !important;
+    height: auto !important;
+  }
+
+  .gallery-featured__card--primary {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    min-height: clamp(340px, 42vw, 390px) !important;
+  }
+
+  .section-heading h2,
+  .cta-panel h2,
+  .about-hero__content h1,
+  .academics-hero__content h1,
+  .faculty-hero__content h1,
+  .gallery-hero__content h1,
+  .contact-hero__content h1,
+  .admissions-hero h1,
+  .repository-hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3.25rem) !important;
+    line-height: 1.15 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-shell {
+    --page-pad: clamp(16px, 5vw, 24px);
+  }
+
+  .repository-page,
+  .admissions-page,
+  .application-page,
+  .facilities-page,
+  .gallery-page,
+  .contact-page,
+  .academics-page,
+  .faculty-page {
+    width: 100% !important;
+    padding-left: var(--page-pad) !important;
+    padding-right: var(--page-pad) !important;
+  }
+
+  .homepage,
+  .about-page {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .topbar {
+    padding: 0.65rem var(--page-pad) !important;
+    gap: 0.75rem !important;
+  }
+
+  .brand-button {
+    min-width: 0;
+    gap: 0.55rem;
+  }
+
+  .brand-text {
+    white-space: nowrap;
+  }
+
+  .main-nav {
+    width: min(82vw, 320px) !important;
+    max-width: calc(100vw - 32px) !important;
+    right: max(-82vw, -320px) !important;
+  }
+
+  .main-nav.open {
+    right: 0 !important;
+  }
+
+  .hero-carousel {
+    height: clamp(430px, 112vw, 520px) !important;
+  }
+
+  .hero-slide {
+    align-items: flex-end;
+    padding: 0 var(--page-pad) 4.25rem !important;
+  }
+
+  .hero-slide::after {
+    inset: 1rem !important;
+  }
+
+  .hero__copy {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .hero__copy .eyebrow {
+    margin-bottom: 0.85rem !important;
+    font-size: 0.72rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero__copy h1 {
+    font-size: clamp(2.05rem, 10vw, 3rem) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 0.75rem !important;
+    padding-top: 0 !important;
+  }
+
+  .hero-description-light {
+    font-size: clamp(0.95rem, 4vw, 1.08rem) !important;
+    line-height: 1.45 !important;
+    margin-bottom: 1.1rem !important;
+  }
+
+  .hero__actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+
+  .admissions-pill-bar {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.78rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .carousel-dots {
+    bottom: 1.1rem !important;
+  }
+
+  .section-heading {
+    padding-left: var(--page-pad);
+    padding-right: var(--page-pad);
+  }
+
+  .section-heading h2,
+  .cta-panel h2,
+  .about-hero__content h1,
+  .academics-hero__content h1,
+  .faculty-hero__content h1,
+  .gallery-hero__content h1,
+  .contact-hero__content h1,
+  .admissions-hero h1,
+  .repository-hero h1 {
+    font-size: clamp(2rem, 9vw, 2.75rem) !important;
+    line-height: 1.16 !important;
+  }
+
+  .facilities-grid,
+  .leaders-grid,
+  .achievements-grid,
+  .home-profile-container,
+  .profile-container,
+  .faculty-grid,
+  .gallery-grid,
+  .academics-pillars__grid,
+  .admissions-journey__grid,
+  .admissions-documents__grid,
+  .contact-info__grid,
+  .vision-mission__grid,
+  .values-grid,
+  .achievements-minimal-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .home-profile-card--wide,
+  .profile-card--wide,
+  .gallery-card--wide,
+  .gallery-card--tall {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  .gallery-featured {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: none !important;
+    grid-auto-rows: auto !important;
+  }
+
+  .gallery-featured__card,
+  .gallery-featured__card--primary {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 260px !important;
+    height: 260px !important;
+  }
+
+  .about-history__container,
+  .principal-staggered-grid,
+  .principal-card-expanded,
+  .academic-profile-grid,
+  .academics-environment,
+  .facilities-hero-v2,
+  .facility-narrative,
+  .facility-arts,
+  .faculty-featured,
+  .contact-form-section {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form,
+  .contact-form-section,
+  .application-form,
+  .academics-intro__card,
+  .faculty-featured__body,
+  .cta-panel {
+    padding-left: var(--page-pad) !important;
+    padding-right: var(--page-pad) !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-img {
+    height: 34px !important;
+  }
+
+  .brand-text {
+    font-size: clamp(0.95rem, 4.5vw, 1.05rem) !important;
+  }
+
+  .hero-carousel {
+    height: clamp(400px, 118vw, 470px) !important;
+  }
+
+  .hero__copy h1 {
+    font-size: clamp(1.9rem, 10.5vw, 2.55rem) !important;
+  }
+
+  .section-heading h2,
+  .cta-panel h2 {
+    font-size: clamp(1.8rem, 9vw, 2.35rem) !important;
+  }
+
+  .facility-card,
+  .home-profile-card,
+  .achievement-card,
+  .achievement-row,
+  .leader-card,
+  .contact-card,
+  .pillar-card {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1150px) {
+  .about-page .about-leadership .leaders-grid {
+    grid-template-columns: repeat(2, minmax(260px, 320px)) !important;
+    justify-content: center !important;
+    justify-items: center !important;
+    max-width: 720px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .principal-staggered-grid {
+    justify-items: center !important;
+  }
+
+  .profile-staggered-pair {
+    display: grid !important;
+    justify-items: center !important;
+    max-width: 520px !important;
+  }
+
+  .stagger-card--image {
+    width: 100% !important;
+  }
+
+  .stagger-card--name {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: min(100%, 420px) !important;
+    margin-top: -2.25rem !important;
+    padding: 1rem 1.25rem !important;
+    border-left: 0 !important;
+    border-top: 5px solid var(--gold) !important;
+    border-radius: 0.5rem !important;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-page .about-leadership .section-heading {
+    text-align: center !important;
+  }
+
+  .about-page .about-leadership .leaders-grid {
+    grid-template-columns: minmax(0, 320px) !important;
+    justify-content: center !important;
+    justify-items: center !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .principal-staggered-grid {
+    justify-items: center !important;
+  }
+
+  .profile-staggered-pair {
+    display: grid !important;
+    justify-items: center !important;
+    width: 100% !important;
+  }
+
+  .stagger-card--name {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: min(100%, 360px) !important;
+    margin-top: -1.5rem !important;
+    padding: 0.95rem 1rem !important;
+    border-left: 0 !important;
+    border-top: 5px solid var(--gold) !important;
+    border-radius: 0.5rem !important;
+    text-align: center !important;
+  }
+
+  .stagger-name {
+    font-size: clamp(0.95rem, 4vw, 1.1rem) !important;
+  }
+
+  .stagger-role {
+    font-size: 0.82rem !important;
+  }
+}
